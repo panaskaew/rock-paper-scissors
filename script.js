@@ -1,3 +1,4 @@
+
 let humanScore = 0;
 let computerScore = 0;
 let gameRound = 1;
@@ -22,8 +23,6 @@ function playRound() {
     console.log(`computer picked ${computerChoice}!`)
     if (computerChoice == humanChoice) {
         gameRound = gameRound + 1
-        humanScore = humanScore + 1
-        computerScore = computerScore + 1
         console.log(`draw! human picked ${humanChoice}, computer picked ${computerChoice}. it is now round ${gameRound}`)
         return ' '
     } else if (computerChoice == 'rock' && humanChoice == 'scissors' || computerChoice == 'paper' && humanChoice == 'rock' || computerChoice == 'scissors' && humanChoice == 'paper') {
@@ -43,11 +42,10 @@ function playGame() {
     if (gameRound >= 6 && humanScore > computerScore) {
         gameRound = 1;
         return `game over. human won! with a score of ${humanScore}. while the computer has ${computerScore}`
-    } else if (gameRound >= 6 && humanScore > computerScore) {
+    } else if (gameRound >= 6 && humanScore < computerScore) {
         gameRound = 1;
-        return `game over. computer won! with a score of ${humanScore}. while the human has ${computerScore}`
-    }
-    else {
+        return `game over. computer won! with a score of ${computerScore}. while the human has ${humanScore}`
+    } else if (gameRound < 6) {
         console.log(playRound())
     }
 }
