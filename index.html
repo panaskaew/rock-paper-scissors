@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS</title>
 </head>
 <body>
-    
+
+    <header>
+    <div class="computer-container">
+        <div class="score-title">AI</div>
+        <div id="computer-score">
+        </div>
+    </div>
+    <div class="requirement">
+    FIRST TO 5 WINS
+    </div>
+    <div class="human-container">
+        <div class="score-title">HUMAN</div>
+        <div id="human-score">
+        </div>
+    </div>
+    </header>
+
+    <div class="match-result">RESULT</div>
+
+    <div class="button-container">
+        <div>
+            <button id="rock">ROCK</button>
+            <button id="paper">PAPER</button>
+            <button id="scissors">SCISSORS</button>
+        </div>
+        <button id="reset">RESET</button>
+        <div class="winner"></div>
+    </div>
+
 </body>
 </html>
